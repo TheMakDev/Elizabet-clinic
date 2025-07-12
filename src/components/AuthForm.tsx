@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Stethoscope, Mail, Lock, User, Phone, Shield } from 'lucide-react';
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from '@/hooks/use-toast';
+import logo from '../asset/icpedu.png'; 
 
 const AuthForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -151,7 +152,10 @@ const AuthForm = () => {
       <Card className="w-full max-w-md bg-white/80 backdrop-blur-sm border-teal-100">
         <CardHeader className="text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <Stethoscope className="w-8 h-8 text-teal-600" />
+            <div>
+              <img src={logo} alt="Clinic Logo" className="w-10 h-10 rounded-full" />
+            </div>
+            
             <h1 className="text-2xl font-bold text-teal-900">Elizabeth Clinic</h1>
           </div>
           <CardTitle className="text-teal-900">Welcome</CardTitle>
